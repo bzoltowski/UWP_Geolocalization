@@ -1,0 +1,48 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Mapa_WPS_BZ.Koordynaty"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="Navigator" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="Koordynaty" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <TextBlock x:Name="tbOpisGPS" HorizontalAlignment="Left" Margin="0,35,0,0" Grid.Row="1" TextWrapping="Wrap" Text="GPS:Moja Położenie" TextAlignment="Center" VerticalAlignment="Top" Width="458"/>
+            <TextBlock x:Name="tbGPS" HorizontalAlignment="Left" Margin="0,62,0,0" Grid.Row="1" TextWrapping="Wrap"  TextAlignment="Center" Text="***" VerticalAlignment="Top" Width="458"/>
+            <TextBlock x:Name="tbOpisAdres" HorizontalAlignment="Left" Margin="0,121,0,0" Grid.Row="1" TextWrapping="Wrap"  TextAlignment="Center" Text="Podaj Adres" VerticalAlignment="Top" Width="458"/>
+
+            <TextBox x:Name="tbAdres" HorizontalAlignment="Left" Height="72" Margin="0,151,0,0" TextWrapping="Wrap" Text="Gdańska, Polska" VerticalAlignment="Top" Width="456"/>
+            <Button x:Name="btnSzukaj" Content="Szukaj Celu" HorizontalAlignment="Left" Margin="0,229,0,0" Grid.Row="1" VerticalAlignment="Top" Width="456"/>
+            <TextBlock x:Name="opisCelu" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="0,300,0,0" Text="Wyznaczone położenie:" TextAlignment="Center" VerticalAlignment="Top" Height="35" Width="446"/>
+            <TextBlock x:Name="dlugCelu" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="0,340,0,0" Text="Długość geog:" TextAlignment="Center" VerticalAlignment="Top" Height="35" Width="446"/>
+            <TextBlock x:Name="szerCelu" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="0,380,0,0" Text="Szerokość geog:" TextAlignment="Center" VerticalAlignment="Top" Height="35" Width="446"/>
+
+        </Grid>
+
+
+
+
+    </Grid>
+
+</phone:PhoneApplicationPage>
